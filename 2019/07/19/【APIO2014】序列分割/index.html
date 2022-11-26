@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【APIO2014】序列分割 | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="题目链接 【APIO2014】序列分割题目描述：你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k + 1 个非空的块。为了得到 k + 1块，你需要重复下面的操作 k 次： 选择一个有超过一个元素的块（初始时你只有一块，即整个序列） 选择两个相邻元素把这个块从中间分开，得到两个非空的块。 每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【APIO2014】序列分割">
+<meta property="og:url" content="http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="题目链接 【APIO2014】序列分割题目描述：你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k + 1 个非空的块。为了得到 k + 1块，你需要重复下面的操作 k 次： 选择一个有超过一个元素的块（初始时你只有一块，即整个序列） 选择两个相邻元素把这个块从中间分开，得到两个非空的块。 每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-07-19T07:22:37.000Z">
+<meta property="article:modified_time" content="2019-09-27T11:22:29.000Z">
+<meta property="article:author" content="Lin Jiale">
+<meta property="article:tag" content="题解">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-【APIO2014】序列分割" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      【APIO2014】序列分割
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-07-19
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problemnew/show/P2120">题目链接</a></p>
+<h3 id="【APIO2014】序列分割"><a href="#【APIO2014】序列分割" class="headerlink" title="【APIO2014】序列分割"></a>【APIO2014】序列分割</h3><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p>你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k + 1 个非空的块。为了得到 k + 1块，你需要重复下面的操作 k 次：</p>
+<p>选择一个有超过一个元素的块（初始时你只有一块，即整个序列）</p>
+<p>选择两个相邻元素把这个块从中间分开，得到两个非空的块。</p>
+<p>每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得分。</p>
+<h4 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h4><h5 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h5><p>第一行包含两个整数 $n$ 和 $k$。保证 $k + 1 \leq n$。<br>第二行包含 $n$ 个非负整数 $a_1, a_2, \cdots, a_n (0 \leq a_i \leq 10^4)$，表示前文所述的序列。</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>第一行输出你能获得的最大总得分。</p>
+<p>第二行输出 $k$ 个介于 $1$ 到 $n - 1$ 之间的整数，表示为了使得总得分最大，你每次操作中分开两个块的位置。第 $i$ 个整数 $s_i$ 表示第 $i$ 次操作将在 $s_i$ 和 $s_{i + 1} $之间把块分开。</p>
+<p>如果有多种方案使得总得分最大，输出任意一种方案即可。</p>
+<h4 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h4><h5 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h5><pre>7 3
+4 1 3 4 0 2 3</pre>
+<h5 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h5><pre>108
+1 3 5</pre>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>你可以通过下面这些操作获得 $108$ 分：</p>
+<p>初始时你有一块 $(4, 1, 3, 4, 0, 2, 3)$。在第 $1$ 个元素后面分开，获得 $4 \times (1 + 3 + 4 + 0 + 2 + 3) &#x3D; 52$ 分。</p>
+<p>你现在有两块 $(4), (1, 3, 4, 0, 2, 3)$。在第 $3$ 个元素后面分开，获得 $(1 + 3) \times (4 + 0 + 2 + 3) &#x3D; 36$ 分。</p>
+<p>你现在有三块 $(4), (1, 3), (4, 0, 2, 3)$。在第 $5$ 个元素后面分开，获得 $(4 + 0) \times (2 + 3) &#x3D; 20$ 分。</p>
+<p>所以，经过这些操作后你可以获得四块 $(4), (1, 3), (4, 0), (2, 3)$ 并获得 $52 + 36 + 20 &#x3D; 108$ 分。</p>
+<p>限制与约定</p>
+<p>第一个子任务共 $11$ 分，满足 $1 \leq k &lt; n \leq 10$。</p>
+<p>第二个子任务共 $11$ 分，满足 $1 \leq k &lt; n \leq 50$。</p>
+<p>第三个子任务共 $11$ 分，满足 $1 \leq k &lt; n \leq 200$。</p>
+<p>第四个子任务共 $17$ 分，满足 $2 \leq n \leq 1000, 1 \leq k \leq \min{n - 1, 200}$。</p>
+<p>第五个子任务共 $21$ 分，满足 $2 \leq n \leq 10000, 1 \leq k \leq \min{n - 1, 200}$。</p>
+<p>第六个子任务共 $29$ 分，满足 $2 \leq n \leq 100000, 1 \leq k \leq \min{n - 1, 200}$。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>在解决这个问题之前，我们先大胆口胡一个结论：分割的顺序不影响最后的结果。<br>接下来就是这个结论的证明了：<br>设两次分割把队列分为了A，B，C三个部分。</p>
+<ol>
+<li>先分割A，B之间，再分割B，C之间：$ans&#x3D;A*(B+C)+B<em>C&#x3D;A</em>B+A<em>C+B</em>C$</li>
+<li>先分割B，C之间，再分割A，B之间：$ans&#x3D;C*(A+B)+A<em>B&#x3D;A</em>B+A<em>C+B</em>C$</li>
+</ol>
+<p>由此可以得出分割的顺序不影响最后的结果。<br>接下来我们就可以进行dp了。<br>这是一个很明显的二维dp。<br>$dp[i][k]$表示前$i$个数被分割了$k$次所能得到的最大的答案。<br>转移方程为$dp[i][k]&#x3D;max(dp[j][k-1]+\sum_{u&#x3D;1}^{j}a[u]*\sum_{u&#x3D;j+1}^{i}a[u])$（在第$k$个数和第$k+1$个数之间分割）<br>证明：<br>假设$dp[j][k-1]$最右边的分割点为$o$和$o+1$（从$j$转移后$dp[i][k]$最后），<br>则$dp[i][k-1]&#x3D;dp[j][k-1]+\sum_{u&#x3D;1}^{o}a[u]*\sum_{u&#x3D;j+1}^{i}a[u]$<br>所以$dp[i][k]&#x3D;dp[i][k-1]+\sum_{u&#x3D;o+1}^{j}a[u]*\sum_{u&#x3D;j+1}^{i}a[u]$<br>$&#x3D;dp[j][k-1]+\sum_{u&#x3D;1}^{o}a[u]*\sum_{u&#x3D;j+1}^{i}a[u]+\sum_{u&#x3D;o+1}^{j}a[u]*\sum_{u&#x3D;j+1}^{i}a[u]$<br>$&#x3D;dp[j][k-1]+\sum_{u&#x3D;1}^{j}a[u]<em>\sum_{u&#x3D;j+1}^{i}a[u]$<br>接下来我们用前缀和减小时间复杂度，<br>设$sum[i]&#x3D;\sum_{j&#x3D;1}^{i}a[j]$<br>所以$dp[i][k]&#x3D;max(dp[j][k-1]+sum[j]</em>(sum[i]-sum[j]))$<br>这个转移方程时间复杂度为O(n^2)，因为$2 \leq n \leq 100000$所以我们用斜率优化。</p>
+<p><strong>重点：</strong><br>我们取$j$，$p$满足 $p&lt;j&lt;i$且$j$比$k$更优，那么有如下不等式：<br>$$dp[j][k-1]+sum[j]<em>(sum[i]-sum[j])&gt;dp[p][k-1]+sum[p]</em>(sum[i]-sum[p])$$<br>化简后得：<br>$$\frac{(dp[j][k-1]-sum[j]^2)-(dp[p][k-1]-sum[p]^2)}{sum[p]-sum[j]}\leq sum[i]$$<br>接下来维护一个下凸壳就可以了。<br><strong>注意：</strong>题目中$a[i]$的范围是非负整数，所以$a[i]$可以为0，计算时需要特判。<br>上代码：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">#define inf <span class="number">1e18</span></span><br><span class="line">using namespace std;</span><br><span class="line">int n,k;</span><br><span class="line">long long a[<span class="number">100009</span>],s[<span class="number">100009</span>];</span><br><span class="line">long long dp[<span class="number">100009</span>];</span><br><span class="line">long long pp[<span class="number">1000009</span>],g[<span class="number">100009</span>];</span><br><span class="line">long long l=<span class="number">1</span>,r=<span class="number">1</span>;</span><br><span class="line">double js(int j,int k)&#123;</span><br><span class="line">    if(s[j]==s[k]) return -inf;</span><br><span class="line">    return <span class="number">1.0</span>*(g[k]-g[j]+s[j]*s[j]-s[k]*s[k])/(s[j]-s[k]);</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    scanf(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line">    for(int j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        scanf(<span class="string">&quot;%lld&quot;</span>,&amp;a[j]);</span><br><span class="line">    for(int j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        s[j]=s[j<span class="number">-1</span>]+a[j];</span><br><span class="line">    for(int o=<span class="number">1</span>;o&lt;=k;o++)&#123;</span><br><span class="line">        l=<span class="number">1</span>;r=<span class="number">1</span>;</span><br><span class="line">        pp[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">        for(int j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            while(l&lt;r &amp;&amp; js(pp[l+<span class="number">1</span>],pp[l])&lt;s[j]) l++;</span><br><span class="line">            dp[j]=g[pp[l]]+(s[j]-s[pp[l]])*s[pp[l]];</span><br><span class="line">            while(l&lt;r &amp;&amp; js(pp[r],pp[r<span class="number">-1</span>])&gt;js(j,pp[r])) r--;</span><br><span class="line">            pp[++r]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            g[j]=dp[j];</span><br><span class="line">    &#125;</span><br><span class="line">    printf(<span class="string">&quot;%lld&quot;</span>,dp[n]);</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年09月27日 19:22</p>
+        <p>原始链接： <a class="post-url" href="/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/" title="【APIO2014】序列分割">http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/&title=《【APIO2014】序列分割》 — Oblivion&pic=https://i.postimg.cc/yxjzW2XN/APIO2014.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/&title=《【APIO2014】序列分割》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【APIO2014】序列分割》 — Oblivion&url=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/07/19/%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E3%80%90APIO2014%E3%80%91%E5%BA%8F%E5%88%97%E5%88%86%E5%89%B2"><span class="post-toc-text">【APIO2014】序列分割</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="post-toc-text">题目描述：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="post-toc-text">输入输出格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="post-toc-text">输入格式：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="post-toc-text">输出格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="post-toc-text">输入输出样例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1%EF%BC%9A"><span class="post-toc-text">输入样例#1：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1%EF%BC%9A"><span class="post-toc-text">输出样例#1：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="post-toc-text">说明</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="post-toc-text">题解</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/07/20/%E3%80%90NOIP17%E6%8F%90%E9%AB%98%E6%A8%A1%E6%8B%9F%E8%AE%AD%E7%BB%8311%E3%80%91%E6%B8%B8%E6%88%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          【NOIP17提高模拟训练11】游戏
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/07/18/%E3%80%90ZJOI2007%E3%80%91%E4%BB%93%E5%BA%93%E5%BB%BA%E8%AE%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">【ZJOI2007】仓库建设</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2022 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/%E5%AE%89%E5%88%A9/">安利</a><a class="category-link" href="/categories/%E5%AE%A3%E8%A8%80/">宣言</a><a class="category-link" href="/categories/%E6%95%99%E5%AD%A6/">教学</a><a class="category-link" href="/categories/%E6%9D%82%E8%AE%B0/">杂记</a><a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a><a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

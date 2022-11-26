@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>种花 flower | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="种花 flower题目描述OI太可怕了，我决定回家种田。我在后院里开辟了一块圆形的花圃，准备种花。种花是一种艺术，通过一定技术手法，花材的排列组合会让花变得更加的赏心悦目，这就是花艺。当然你知道，我在种田之前是OIer，所以我不懂花艺，只会排列组合。我把花圃从圆心向外画线，分成了$N$块扇形，分别编号为$1$，$2$，$3$…..$N$，再从村里的商店采购了$M$种花。然后我大胆的决定：花圃中的每">
+<meta property="og:type" content="article">
+<meta property="og:title" content="种花 flower">
+<meta property="og:url" content="http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="种花 flower题目描述OI太可怕了，我决定回家种田。我在后院里开辟了一块圆形的花圃，准备种花。种花是一种艺术，通过一定技术手法，花材的排列组合会让花变得更加的赏心悦目，这就是花艺。当然你知道，我在种田之前是OIer，所以我不懂花艺，只会排列组合。我把花圃从圆心向外画线，分成了$N$块扇形，分别编号为$1$，$2$，$3$…..$N$，再从村里的商店采购了$M$种花。然后我大胆的决定：花圃中的每">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-09-28T02:53:32.000Z">
+<meta property="article:modified_time" content="2020-01-18T01:57:01.000Z">
+<meta property="article:author" content="Lin Jiale">
+<meta property="article:tag" content="题解">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-种花 flower" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      种花 flower
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-09-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="种花-flower"><a href="#种花-flower" class="headerlink" title="种花 flower"></a>种花 flower</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>OI太可怕了，我决定回家种田。<br>我在后院里开辟了一块圆形的花圃，准备种花。种花是一种艺术，通过一定技术手法，花材的排列组合会让花变得更加的赏心悦目，这就是花艺。<br>当然你知道，我在种田之前是OIer，所以我不懂花艺，只会排列组合。我把花圃从圆心向外画线，分成了$N$块扇形，分别编号为$1$，$2$，$3$…..$N$，再从村里的商店采购了$M$种花。然后我大胆的决定：花圃中的每块只种$M$种花中的一种，相邻的两块不能种同一种花。我反应比较慢，所以我请来了机房里手速最快的强袭黯灭勋章鱼人守卫来帮我，让他试一下每种排列，看看哪种最令人赏心悦目。<br>有一些人，他们的美丽就在身边，也许就在自己身上，像艺术家一样，他们的眼光独到特别，可就因为他们不是艺术家，他们不被人们认可，被称之为另类。简单真实的事情总可以绽放最鲜艳的花，我欣赏这样的人的心理，当然拒绝粗鲁地对待一切。<br>正想着，他居然告诉我已经尝试完了。这怎么可能？这可一共有…….多少种方案来着？<br>众所周知的是，我的智商很低。<br>我想知道种花的方案一共有几种。</p>
+<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>仅一行，包含两个整数，分别为$N$和$M$。</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>仅一行，包含一个整数，表示方案数。这个数可能很大，你只需要输出这个数对$1000000007$取模的结果。</p>
+<h4 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h4><pre>3 3
+</pre>
+<h4 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h4><pre>6
+</pre>
+<h4 id="数据范围："><a href="#数据范围：" class="headerlink" title="数据范围："></a>数据范围：</h4><p>对于20%的数据，$0&lt;N≤5$，$1&lt;M≤5$<br>对于60%的数据，$0&lt;N≤500,000$<br>对于100%的数据，$0&lt;N≤10^{18}$，$1&lt;M≤10^9$</p>
+<h4 id="时间限制："><a href="#时间限制：" class="headerlink" title="时间限制："></a>时间限制：</h4><p>1S</p>
+<h4 id="空间限制："><a href="#空间限制：" class="headerlink" title="空间限制："></a>空间限制：</h4><p>128M</p>
+<h4 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h4><p>remove!!!</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>此题的题意就是将$m$种点放到$n$个围成圈的位置里，要求相邻的点不能相同。<br>我们先假设$n$个位置是一条链，那么方案数就是$m(m-1)^{n-1}$。<br>那么如果是环的话方案数就是$m(m-1)^{n-1}$再减去最后一个位置和第一个位置重复的个数就行了。<br>考虑一下当倒数第二个位置和第一个位置相同的话，因为最后一个位置和倒数第二个位置是不同的，所以这部分的最后一个位置和第一个位置是不会相同的。<br>当倒数第二个位置和第一个位置不相同的话，倒数第二个位置和第一个位置的每一种不相同的情况下，最后一个位置都会存在和第一个位置一样的情况被计算在$m(m-1)^{n-1}$中。<br>所以方案数就是$m(m-1)^{n-1}$减去倒数第二个位置和第一个位置不相同的方案数。<br>如果$F[n]$表示有$n$个位置时的方案数。<br>那么$F[n]&#x3D;m(m-1)^{n-1}-F[n-1]$就是方案数的递推方程了。<br><strong>这里要注意一下：</strong><br>$F[1]&#x3D;m$是显而易见的。<br>但是当$n&#x3D;2$时，倒数第二个位置就是第一个位置，所以$F[2]&#x3D;m(m-1)$。<br>题目说$0&lt;N≤10^{18}$，但是递推方程的时间复杂度是$O(n)$的。<br>所以我们用等比数列求和来优化一下。<br>得到$F[n]&#x3D;(m-1)^n+(m-1)(-1)^n$<br>接着我们再用快速幂优化后时间复杂度就变成了$O(log_2n)$。<br>上代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#define mod 1000000007</span><br><span class="line">using namespace std;</span><br><span class="line">long long n,m;</span><br><span class="line">long long ksm(long long x,long long p)&#123;</span><br><span class="line">	long long s=x,ans=1;</span><br><span class="line">	while(p)&#123;</span><br><span class="line">		if(p&amp;1) ans*=s;</span><br><span class="line">		s*=s;</span><br><span class="line">		s%=mod;</span><br><span class="line">		ans%=mod;</span><br><span class="line">		p/=2;</span><br><span class="line">	&#125;</span><br><span class="line">	return ans%mod;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(&quot;%lld%lld&quot;,&amp;n,&amp;m);</span><br><span class="line">	printf(&quot;%lld&quot;,(ksm(m-1,n)%mod+((m-1)*ksm(-1,n))%mod+mod)%mod);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年01月18日 09:57</p>
+        <p>原始链接： <a class="post-url" href="/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/" title="种花 flower">http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/&title=《种花 flower》 — Oblivion&pic=https://i.postimg.cc/kX01N7Xx/32593751-p0.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/&title=《种花 flower》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《种花 flower》 — Oblivion&url=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/09/28/%E7%A7%8D%E8%8A%B1%20flower/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A7%8D%E8%8A%B1-flower"><span class="post-toc-text">种花 flower</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="post-toc-text">输出格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="post-toc-text">样例输入：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%EF%BC%9A"><span class="post-toc-text">样例输出：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%EF%BC%9A"><span class="post-toc-text">数据范围：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%97%B6%E9%97%B4%E9%99%90%E5%88%B6%EF%BC%9A"><span class="post-toc-text">时间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%A9%BA%E9%97%B4%E9%99%90%E5%88%B6%EF%BC%9A"><span class="post-toc-text">空间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8F%90%E7%A4%BA%EF%BC%9A"><span class="post-toc-text">提示：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="post-toc-text">题解</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/09/28/%E5%8F%8B%E5%A5%BD%E6%95%B0%E5%AF%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          友好数对
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/09/24/%E5%BD%B1%E5%83%8F%E5%85%B1%E4%BA%AB%E5%B9%B3%E5%8F%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">影像共享平台</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2022 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/%E5%AE%89%E5%88%A9/">安利</a><a class="category-link" href="/categories/%E5%AE%A3%E8%A8%80/">宣言</a><a class="category-link" href="/categories/%E6%95%99%E5%AD%A6/">教学</a><a class="category-link" href="/categories/%E6%9D%82%E8%AE%B0/">杂记</a><a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a><a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

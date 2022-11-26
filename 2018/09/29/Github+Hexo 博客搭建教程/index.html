@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Github+Hexo 博客搭建教程 | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="环境配置 Windows32&#x2F;64 Node.js | 32位 | 64位 Git | 32位 | 64位 Sublime Text | 32位 | 64位 (下述文件均用这个软件打开) 配置环境变量 教程 完成检查: 如果与下述相同就OK了123456789&#x2F;&#x2F;Windows+R cmdC:\Users\student&gt;node -vv9.9.0C:\Users\student&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github+Hexo 博客搭建教程">
+<meta property="og:url" content="http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="环境配置 Windows32&#x2F;64 Node.js | 32位 | 64位 Git | 32位 | 64位 Sublime Text | 32位 | 64位 (下述文件均用这个软件打开) 配置环境变量 教程 完成检查: 如果与下述相同就OK了123456789&#x2F;&#x2F;Windows+R cmdC:\Users\student&gt;node -vv9.9.0C:\Users\student&amp;">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2018/10/28/5bd5a9de77c53.png">
+<meta property="article:published_time" content="2018-09-29T06:32:51.000Z">
+<meta property="article:modified_time" content="2019-07-14T11:24:00.000Z">
+<meta property="article:author" content="Lin Jiale">
+<meta property="article:tag" content="教学">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/28/5bd5a9de77c53.png">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Github+Hexo 博客搭建教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Github+Hexo 博客搭建教程
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/教学/">教学</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-09-29
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ol>
+<li>Windows32&#x2F;64</li>
+<li><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a> | <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x86.msi">32位</a> | <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x64.msi">64位</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git</a> | <a target="_blank" rel="noopener" href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe">32位</a> | <a target="_blank" rel="noopener" href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe">64位</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sublimetext.com/3">Sublime Text</a> | <a target="_blank" rel="noopener" href="https://download.sublimetext.com/Sublime%20Text%20Build%203143%20Setup.exe">32位</a> | <a target="_blank" rel="noopener" href="https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe">64位</a> (下述文件均用这个软件打开)</li>
+<li>配置环境变量 <a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/b24f6c82cba6dc86bfe5da9f.html">教程</a></li>
+<li>完成检查: 如果与下述相同就OK了<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//Windows+R cmd</span><br><span class="line">C:\Users\student&gt;<span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">v9.<span class="number">9.0</span></span><br><span class="line"></span><br><span class="line">C:\Users\student&gt;npm -v</span><br><span class="line"><span class="number">5.6</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">C:\Users\student&gt;git --<span class="keyword">version</span></span><br><span class="line">git <span class="keyword">version</span> <span class="number">2.16</span>.<span class="number">2</span>.windows.<span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="账号准备"><a href="#账号准备" class="headerlink" title="账号准备"></a>账号准备</h3><ol>
+<li>Github账号,下述账号名称之为NAME,邮箱名称之为EMAI.</li>
+<li>新建项目(Github首页-&gt;Start a project)<br><img src="https://i.loli.net/2018/10/28/5bd5a9de77c53.png"></li>
+</ol>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><h4 id="根目录创建"><a href="#根目录创建" class="headerlink" title="根目录创建"></a>根目录创建</h4><p>在一个合适的位置创建一个文件夹(别称:根目录),下文中由E:\Blog来演示.</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">C</span><span class="operator">:</span>\<span class="variable">Users</span>\<span class="variable">student</span><span class="operator">&gt;</span><span class="built_in">E</span><span class="operator">:</span></span><br><span class="line"><span class="built_in">E</span><span class="operator">:</span>\<span class="operator">&gt;</span><span class="variable">cd</span> <span class="variable">Blog</span></span><br><span class="line"><span class="built_in">E</span><span class="operator">:</span>\<span class="variable">Blog</span><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo."></a>安装hexo.</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E:\Blog&gt;npm install hexo -g --save</span><br><span class="line"><span class="regexp">//</span>WARN*<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>检查:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">E</span>:\Blog&gt;hexo -v</span><br><span class="line"><span class="attribute">hexo</span>: <span class="number">3</span>.<span class="number">6</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">hexo</span>-cli: <span class="number">1</span>.<span class="number">1</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">os</span>: Windows_NT <span class="number">6</span>.<span class="number">1</span>.<span class="number">7601</span> win32 ia32</span><br><span class="line"><span class="attribute">http_parser</span>: <span class="number">2</span>.<span class="number">7</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">node</span>: <span class="number">9</span>.<span class="number">9</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">v8</span>: <span class="number">6.2.414.46</span>-node.<span class="number">22</span></span><br><span class="line"><span class="attribute">uv</span>: <span class="number">1</span>.<span class="number">19</span>.<span class="number">2</span></span><br><span class="line"><span class="attribute">zlib</span>: <span class="number">1</span>.<span class="number">2</span>.<span class="number">11</span></span><br><span class="line"><span class="attribute">ares</span>: <span class="number">1</span>.<span class="number">13</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">modules</span>: <span class="number">59</span></span><br><span class="line"><span class="attribute">nghttp2</span>: <span class="number">1</span>.<span class="number">29</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">napi</span>: <span class="number">2</span></span><br><span class="line"><span class="attribute">openssl</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">2</span>n</span><br><span class="line"><span class="attribute">icu</span>: <span class="number">60</span>.<span class="number">2</span></span><br><span class="line"><span class="attribute">unicode</span>: <span class="number">10</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">cldr</span>: <span class="number">32</span>.<span class="number">0</span>.<span class="number">1</span></span><br><span class="line"><span class="attribute">tz</span>: <span class="number">2017</span>c</span><br></pre></td></tr></table></figure>
+<h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo."></a>初始化hexo.</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E:\Blog&gt;hexo init</span><br><span class="line"><span class="regexp">//</span>WARN*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>检查: 最后会显示 INFO Start blogging with Hexo!</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">E:</span>\Blog&gt;hexo install</span><br><span class="line"><span class="comment">//WARN*2</span></span><br><span class="line"><span class="symbol">E:</span>\Blog&gt;hexo g</span><br><span class="line"><span class="symbol">E:</span>\Blog&gt;npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">//WARN*2</span></span><br></pre></td></tr></table></figure>
+<h4 id="连接Hexo—Github-page"><a href="#连接Hexo—Github-page" class="headerlink" title="连接Hexo—Github_page."></a>连接Hexo—Github_page.</h4><p>在根目录下右键,选择Git Bash Here.<br>如果第一次使用,输入</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student<span class="symbol">@XJ507011</span> MINGW32 /e/Blog</span><br><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">&quot;NAME&quot;</span></span><br><span class="line"></span><br><span class="line">student<span class="symbol">@XJ507011</span> MINGW32 /e/Blog</span><br><span class="line">$ git config --<span class="keyword">global</span> user.email <span class="string">&quot;EMAIL&quot;</span></span><br></pre></td></tr></table></figure>
+<p>否则什么都不干.<br>接下来输入:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ssh-keygen -t rsa -C <span class="string">&quot;EMAIL&quot;</span></span></span><br><span class="line">//连续三个回车</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ssh-add ~/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
+<p>进入Github,点击头像下的<code>Settings</code>,选择<code>SSH and GPS keys</code>,点击<code>New SSH key</code>.<br><code>Title: </code>任意, <code>Key: </code>.ssh\id-rsa.pub的内容.（默认路径为: C:\Users\Administrator.ssh）<br>检查:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student@XJ507011 MINGW32 ~</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line"><span class="regexp">//</span>如果还有要输入的,回答yes.</span><br><span class="line">Hi oierlin! Yo<span class="string">u&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string">//只要&#x27;</span>Hi<span class="string">&#x27;后面是你的NAME,有warning也没关系.</span></span><br></pre></td></tr></table></figure>
+<p>找到根目录下的<code>_config.yml</code>文件,在文本末尾你会找到<code>deploy:</code>,<br>将其修改成:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repository:</span> git@github.com:NAME/NAME.github.io.git</span><br><span class="line">  <span class="meta">#or repository: https:<span class="comment">//github.com/NAME/NAME.github.io.git</span></span></span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
+<p><code>repository</code>最好用前者,否则在<code>hexo d -g</code>时有几率出现<code>bash: /dev/tty: No such device or address</code>错误</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">E:</span>\Blog&gt;hexo d -g</span><br></pre></td></tr></table></figure>
+<p>将本地文件上传到Github上.</p>
+<h3 id="Hexo-指令浅谈"><a href="#Hexo-指令浅谈" class="headerlink" title="Hexo 指令浅谈"></a>Hexo 指令浅谈</h3><h4 id="简写对照"><a href="#简写对照" class="headerlink" title="简写对照"></a>简写对照</h4><p><code>n--new</code><br><code>p--publish</code><br><code>g--generate</code><br><code>s--server</code><br><code>d--deploy</code></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>npm install hexo -g</code></p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p><code>npm update hexo -g</code></p>
+<h4 id="初始化-1"><a href="#初始化-1" class="headerlink" title="初始化"></a>初始化</h4><p><code>hexo init</code></p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p><code>hexo d -g</code>&#x2F;&#x2F;上传</p>
+<h4 id="本地编辑"><a href="#本地编辑" class="headerlink" title="本地编辑"></a>本地编辑</h4><p><code>hexo s</code><br>在<code>http://localhost:4000/</code>查看</p>
+<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p><code>hexo n post &quot;TITLE&quot; </code>: 添加博客.<br><code>hexo n page &quot;TITLE&quot; </code>: 添加分栏.</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年07月14日 19:24</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="Github+Hexo 博客搭建教程">http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/&title=《Github+Hexo 博客搭建教程》 — Oblivion&pic=https://i.loli.net/2018/09/28/5bad8c76ab252.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/&title=《Github+Hexo 博客搭建教程》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Github+Hexo 博客搭建教程》 — Oblivion&url=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2018/09/29/Github+Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/教学/" class="color3">教学</a>
+      
+    <a href="/tags/博客/" class="color3">博客</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="post-toc-text">环境配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B4%A6%E5%8F%B7%E5%87%86%E5%A4%87"><span class="post-toc-text">账号准备</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="post-toc-text">初始化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA"><span class="post-toc-text">根目录创建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="post-toc-text">安装hexo.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96hexo"><span class="post-toc-text">初始化hexo.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BF%9E%E6%8E%A5Hexo%E2%80%94Github-page"><span class="post-toc-text">连接Hexo—Github_page.</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9C%80%E5%90%8E"><span class="post-toc-text">最后</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hexo-%E6%8C%87%E4%BB%A4%E6%B5%85%E8%B0%88"><span class="post-toc-text">Hexo 指令浅谈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AE%80%E5%86%99%E5%AF%B9%E7%85%A7"><span class="post-toc-text">简写对照</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85"><span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9B%B4%E6%96%B0"><span class="post-toc-text">更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-1"><span class="post-toc-text">初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="post-toc-text">部署</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%BE%91"><span class="post-toc-text">本地编辑</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8F%92%E5%85%A5"><span class="post-toc-text">插入</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/10/08/%E6%9C%80%E5%AE%89%E5%85%A8%E7%9A%84%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94Cryptocat/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          最安全的聊天工具——Cryptocat
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/09/25/LJ%E8%AF%AD%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">LJ语录</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2022 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/%E5%AE%89%E5%88%A9/">安利</a><a class="category-link" href="/categories/%E5%AE%A3%E8%A8%80/">宣言</a><a class="category-link" href="/categories/%E6%95%99%E5%AD%A6/">教学</a><a class="category-link" href="/categories/%E6%9D%82%E8%AE%B0/">杂记</a><a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a><a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12.5px;">博客</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/" style="font-size: 10px;">启动器</a> <a href="/tags/%E5%AE%89%E5%88%A9/" style="font-size: 17.5px;">安利</a> <a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 15px;">教学</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 10px;">杂记</a> <a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 10px;">洛谷</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 10px;">统计</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">聊天工具</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
